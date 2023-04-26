@@ -1,105 +1,87 @@
-# React homework template
+# Карточки
 
-Este proyecto fue creado con la ayuda de
-[Create React App](https://github.com/facebook/create-react-app).
-[Consulte la documentación](https://facebook.github.io/create-react-app/docs/getting-started)
-para familiarizarse con las funciones opcionales y configurarlas.
+Цей проект було створено за допомогою
+[Create React App](https://github.com/facebook/create-react-app). Для знайомства
+та налаштування додаткових можливостей
+[зверніться до документації](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Создание репозитория по шаблону
+## Мета створення проекту
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+Метою створення проекту було користування користувачем інтерактивних карток.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+## Критерії виконання
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+1. Верстка фіксована в рх, семантична та валідна.
+2. Робота виконана на нативному JS з використанням зборщиків або на React.
+3. Немає помилок в консолі браузера.
+4. Код відформатований та без коментарів.
+5. В репозиторії має бути описаний README.md.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+## Технічне завдання
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+1. Відповідно до макету потрібно реалізувати картки юзера.
+2. При клікові на кнопку Follow - текст змінюється на Following. Також
+   змінюється колір кнопки. А до кількості фоловерів додається і ваш. Тобто,
+   початкова кількість складає 100,500 фоловерів. При клікові на кнопку буде
+   100,501.
+3. При оновлені сторінки має фіксуватись кінцевий результат дій юзера. Тобто,
+   якщо клікнути по кнопці і оновити сторінку - то кнопка все рівно залишається
+   в стані Following із відповідним кольором, а кількість фоловерів НЕ
+   зменшується до початкового значення.
+4. При повторному клікові на кнопку її текст та колір змінюються до початкового
+   стану. Також змінюється і кількість фоловерів. Вона зменшується на 1
+   (100,500).
+5. В коді цифра 100,500 має бути прописана одним значенням (100500). В UI -
+   виведено через кому (100,500).
 
-## Подготовка к работе
+### Бекенд
 
-1. Asegúrate de que la versión LTS de Node.js está instalada en tu computador.
-   [Descárguela e instálela](https://nodejs.org/en/) de ser necesario.
-2. Instala las dependencias base del proyecto con el comando `npm install`.
-3. Inicia el modo de desarrollo ejecutando el comando `npm start`.
-4. En tu navegador, ve a la dirección
-   [http://localhost:3000](http://localhost:3000). Esta página se recargará
-   automáticamente después de guardar los cambios en los archivos del proyecto.
+Створити свій персональний бекенд для розробки за допомогою UI-сервісу
+mockapi.io.
 
-## Implementación
+### Додатково
 
-La versión de producción del proyecto se verificará, compilará y desplegará
-automáticamente en GitHub Pages, en la rama `gh-pages`, cada vez que se
-actualice la rama `main`. Por ejemplo, después de un Push directo o de una
-Pool-request aceptada. Para ello, edita el campo `homepage` del archivo
-`package.json`, sustituyendo `your_username` y `your_repo_name` por los tuyos
-propios, y envía los cambios a GitHub.
+Додатково була створи маршрутизація за допомогою React Router.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+# Cards
 
-A continuación, ve a la configuración del repositorio de GitHub (`Settings` >
-`Pages`) y selecciona distribuir la versión de producción de los archivos desde
-la carpeta `/root` de la rama `gh-pages`, si no se ha hecho automáticamente.
+This project was created with the help of
+[Create React App](https://github.com/facebook/create-react-app). For
+acquaintance and setting additional features
+[refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-![GitHub Pages settings](./assets/repo-settings.png)
+## The purpose of creating the project
 
-### Estado de la implantación
+The purpose of creating the project was the user's use of interactive cards.
 
-El estado del último commit se indica con un icono junto al ID del commit.
+## Performance criteria
 
-- **Color amarillo** - el proyecto está compilado e implementado.
-- **Color verde** - La implementación se completó con éxito.
-- **Color rojo** - Se ha producido un error durante la verificación, la
-  compilación o la implementación
+1. The layout is fixed in px, semantic and valid.
+2. The work is done on native JS using assemblers or on React.
+3. There are no errors in the browser console.
+4. The code is formatted and uncommented.
+5. A README.md should be described in the repository.
 
-Se puede ver información de estado más detallada haciendo clic en el icono y en
-la ventana desplegable del enlace `Detalles`.
+## Technical task
 
-![Deployment status](./assets/deploy-status.png)
+1. According to the layout, you need to implement user cards.
+2. When clicking on the Follow button, the text changes to Following. Also the
+   color of the button changes. And yours is added to the number of followers.
+   That is, the initial number is 100,500 followers. When you click on the
+   button it will be 100,501.
+3. When the page is updated, the final result of the user's actions should be
+   recorded. That is, if you click on the button and refresh the page, the
+   button remains the same in the Following state with the corresponding color,
+   and the follower count is NOT decreases to the initial value.
+4. When you click the button again, its text and color change to the original
+   state The number of followers also changes. It decreases by 1 (100,500).
+5. In the code, the number 100,500 must be written with one value (100500). In
+   the UI - comma-delimited (100,500).
 
-### Página activa
+### Backend
 
-Después de un tiempo, normalmente un par de minutos, la página real se puede ver
-en la dirección especificada en la propiedad `homepage`. Por ejemplo, aquí está
-el enlace a la versión activa de este repositorio
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+Create your personal backend for development using the UI service mockapi.io.
 
-Si se abre una página en blanco, asegúrate de que no haya errores en la pestaña
-`Console` relacionados con rutas incorrectas de archivos CSS y JS del proyecto
-(**404**). Probablemente tienes un valor incorrecto para la propiedad `homepage`
-en el archivo `package.json`.
+### Additionally
 
-### Enrutamiento
-
-Si la aplicación utiliza la librería `react-router-dom` para el enrutamiento, el
-componente `<BrowserRouter>` debe ser configurado adicionalmente pasando en la
-prop `basename`, el nombre exacto de tu repositorio. Las barras inclinadas al
-principio y al final de la cadena son obligatorias.
-
-```jsx
-<BrowserRouter basename="/your_repo_name/">
-  <App />
-</BrowserRouter>
-```
-
-## ¿Cómo funciona?
-
-![How it works](./assets/how-it-works.png)
-
-1. Después de cada push a la rama `main` del repositorio GitHub, se ejecuta un
-   script especial (GitHub Action) del archivo `.github/workflows/deploy.yml`.
-2. Todos los archivos del repositorio se copian en el servidor, donde el
-   proyecto se inicializa, se verifica y se compila antes de ser implementado.
-3. Si todos los pasos tienen éxito, la versión de producción compilada de los
-   archivos del proyecto se envía a la rama `gh-pages`. De lo contrario, el
-   registro de ejecución del script indicará cuál es el problema.
+In addition, routing was created using React Router.
