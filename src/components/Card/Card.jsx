@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import {
   Avatar,
   Boy,
-  Picture,
-  Rectangle,
-  StyledButton,
+  Image,
+  RectangleImage,
+  StyledFollowButton,
   StyledFollowingButton,
-  Text,
-  TextWrapper,
+  StyledText,
+  TextContainer,
   Wrapper,
 } from './CardStyle';
 
@@ -35,18 +35,18 @@ export const Card = ({ tweets, avatar, user }) => {
 
   return (
     <Wrapper>
-      <Picture></Picture>
-      <Rectangle></Rectangle>
+      <Image></Image>
+      <RectangleImage></RectangleImage>
       <Boy>
         <Avatar src={avatar} alt="User avatar" />
       </Boy>
-      <TextWrapper>
-        <Text>{user}</Text>
-        <Text>{tweets} tweets</Text>
-        <Text>{followersCount} followers</Text>
-      </TextWrapper>
+      <TextContainer>
+        <StyledText>{user}</StyledText>
+        <StyledText>{tweets} tweets</StyledText>
+        <StyledText>{followersCount} followers</StyledText>
+      </TextContainer>
       {!isFollowing ? (
-        <StyledButton onClick={handleChange}>follow</StyledButton>
+        <StyledFollowButton onClick={handleChange}>follow</StyledFollowButton>
       ) : (
         <StyledFollowingButton onClick={handleChange}>
           following

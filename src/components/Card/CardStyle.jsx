@@ -30,13 +30,13 @@ export const Wrapper = styled('div')({
   boxShadow: '10px 10px 5px 0px rgba(0, 0, 0, 0.75)',
 });
 
-export const Picture = styled('div')({
+export const Image = styled('div')({
   width: '308px',
   height: '168px',
   backgroundImage: `url(${picture})`,
 });
 
-export const Rectangle = styled('div')({
+export const RectangleImage = styled('div')({
   width: '100%',
   height: '8px',
   marginTop: '18px',
@@ -54,7 +54,7 @@ export const Boy = styled('div')({
   overflow: 'hidden',
 });
 
-export const TextWrapper = styled('div')({
+export const TextContainer = styled('div')({
   marginTop: '50px',
   display: 'flex',
   flexDirection: 'column',
@@ -63,7 +63,7 @@ export const TextWrapper = styled('div')({
   alignItems: 'center',
 });
 
-export const Text = styled(Typography)({
+export const StyledText = styled(Typography)({
   height: '24px',
   width: 'fit-content',
   margin: '0',
@@ -76,7 +76,7 @@ export const Text = styled(Typography)({
   textTransform: 'uppercase',
 });
 
-export const StyledButton = styled(Button)({
+export const StyledFollowButton = styled(Button)({
   marginTop: '20px',
   width: '196px',
   height: '50px',
