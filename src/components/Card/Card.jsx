@@ -13,21 +13,27 @@ import {
 
 
 
-export const Card = ({ tweets, avatar, user }) => {
+export const Card = ({ tweets, avatar, user, followers }) => {
     const [isFollowing, setIsFollowing] = useState(() => {
         const isFollowing = JSON.parse(localStorage.getItem('isFollowing'));
         return isFollowing !== null ? isFollowing : false;
       });
+
+      let numberFollowers = followers;
+      let formattedFollowers = numberFollowers.toLocaleString('en-US');
+
       const [followersCount, setFollowersCount] = useState(() => {
         const followersCount = JSON.parse(localStorage.getItem('followersCount'));
-        return followersCount !== null ? followersCount : 100500;
+        return followersCount !== null ? followersCount : formattedFollowers;
       });
+
+
         
       const handleChange = () => {
         setIsFollowing(!isFollowing);
         setFollowersCount(isFollowing ? followersCount - 1 : followersCount + 1);
         };
-        
+
       useEffect(() => {
         localStorage.setItem('isFollowing', JSON.stringify(isFollowing));
         localStorage.setItem('followersCount', JSON.stringify(followersCount));
